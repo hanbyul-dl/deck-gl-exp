@@ -1,0 +1,19 @@
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.selection_box {
+  float: left;
+  width: 400px;
+  margin-right: 50px;
+}
+
+.each_product {
+  width: 100%;
+  padding: 10px;
+  overflow-wrap: break-word;
+  cursor: pointer;
+}
