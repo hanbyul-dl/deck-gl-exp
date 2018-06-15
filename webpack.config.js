@@ -25,15 +25,24 @@
 const resolve = require('path').resolve;
 const join = require('path').join;
 const webpack = require('webpack');
+const path = require('path');
 
 const CONFIG = {
   // bundle app.js and everything it imports, recursively.
   entry: {
     app: resolve('./src/index.js')
   },
-
+  output: {
+    path: path.resolve(__dirname, 'public/scripts'),
+    publicPath: 'scripts/',
+    filename: 'bundle.js'
+  },
   devtool: 'source-map',
-
+  devServer: {
+    publicPath: '/',
+    contentBase: './public',
+    hot: true
+  },
   module: {
     rules: [
       {
